@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-family: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 200px;
+}
+
+body {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas: "a h" "a m";
+  grid-template-columns: minmax(300px, 1fr) 4fr;
+}
+
+aside {
+  grid-area: a;
+  background-color: #153342;
+  color: #eee;
+}
+aside .logo {
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+aside .logo i {
+  font-size: 2rem;
+}
+aside .logo h1 {
+  font-size: 2rem;
+}
+aside .nav .main-group li {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  height: 3rem;
+  padding-top: 0.7rem;
+  transition: 0.3s;
+}
+aside .nav .main-group li i {
+  font-size: 1.5rem;
+  margin-right: 20px;
+  margin-left: 2rem;
+  padding-top: 0.7rem;
+}
+aside .nav .main-group li:hover {
+  background-color: #F5B873;
+  color: #153342;
+  cursor: pointer;
+}
+aside .nav .active {
+  background-color: #F5B873;
+  color: #153342;
+}
+aside .nav .secondary-group {
+  margin-top: 3rem;
+}
+aside .nav .secondary-group li {
+  font-size: 1.3rem;
+  text-transform: capitalize;
+  height: 3rem;
+  padding-top: 0.7rem;
+  transition: 0.3s;
+}
+aside .nav .secondary-group li i {
+  font-size: 1.5rem;
+  margin-right: 20px;
+  margin-left: 2rem;
+  padding-top: 0.7rem;
+}
+aside .nav .secondary-group li:hover {
+  background-color: #F5B873;
+  color: #153342;
+  cursor: pointer;
+}
+
+header {
+  grid-area: h;
+  padding: 2rem;
+  box-shadow: 5px 0px 5px #eee;
+}
+header .upper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .upper .left {
+  display: flex;
+  gap: 10px;
+  width: clamp(200px, 60%, 600px);
+}
+header .upper .left button {
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  transition: 0.3s all ease-in-out;
+  color: #153342;
+}
+header .upper .left button:hover {
+  background-color: #153342;
+  color: #F5B873;
+  cursor: pointer;
+}
+header .upper .left input {
+  flex: 1;
+  border-radius: 20px;
+  border: none;
+  background-color: #eee;
+  padding: 0.5rem 1rem;
+}
+header .upper .left input:focus {
+  border: 1px solid #F5B873;
+  outline: none;
+}
+header .upper .right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+header .upper .right i {
+  font-size: 1.5rem;
+}
+header .upper .right i:hover {
+  cursor: pointer;
+}
+header .upper .right img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #F5B873;
+}
+header .upper .right img:hover {
+  cursor: pointer;
+}
+header .upper .right h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+main {
+  grid-area: m;
+  background-color: #eee;
+}/*# sourceMappingURL=main.css.map */

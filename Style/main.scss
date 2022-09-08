@@ -1,0 +1,170 @@
+@import "config";
+
+img {
+    max-width: 200px;
+}
+
+body {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas: 
+    "a h"
+    "a m";
+    grid-template-columns: minmax(300px, 1fr) 4fr ;
+
+
+}
+
+aside {
+    grid-area: a;
+    background-color: $primary-color;
+    color: #eee;
+
+    .logo {
+        margin: 2rem;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        i{
+            font-size: 2rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+    }
+
+    .nav {
+        // margin: 1rem;
+        // margin-top: 2rem;
+        // margin-left: 2rem;
+        .main-group{
+            li {
+                font-size: 1.3rem;
+                text-transform: capitalize;
+                height: 3rem;
+                padding-top: .7rem;
+                transition: .3s;
+                i {
+                        font-size: 1.5rem;
+                        margin-right: 20px;
+                        margin-left: 2rem;
+                        padding-top: .7rem;
+                    }
+                &:hover {
+                    background-color: $secondry-color;
+                    color: $primary-color;
+                    cursor: pointer;
+                }
+            }
+        }
+        .active {
+            background-color: $secondry-color;
+            color: $primary-color;
+        }
+
+        .secondary-group {
+            margin-top: 3rem;
+            li {
+                font-size: 1.3rem;
+                text-transform: capitalize;
+                height: 3rem;
+                padding-top: .7rem;
+                transition: .3s;
+                i {
+                    font-size: 1.5rem;
+                    margin-right: 20px;
+                    margin-left: 2rem;
+                    padding-top: .7rem;
+                }
+                &:hover {
+                    background-color: $secondry-color;
+                    color: $primary-color;
+                    cursor: pointer;
+                }
+            }
+        }
+        
+       
+    }
+}
+
+header {
+    grid-area: h;
+    padding: 2rem;
+    box-shadow: 5px 0px 5px #eee;
+    .upper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .left {
+            display: flex;
+            gap: 10px;
+            width: clamp(200px, 60%, 600px);
+            button {
+                font-size: 1.2rem;
+                background:none;
+                border: none;
+                width: 2rem;
+                height: 2rem;
+                border-radius: 50%;
+                transition: .3s all ease-in-out;
+                color: $primary-color;
+                &:hover {
+                    background-color: $primary-color;
+                    color: $secondry-color;
+                    cursor: pointer;
+                }
+            }
+            input {
+                flex: 1;
+                border-radius: 20px;
+                border: none;
+                background-color: $grey-color;
+                padding: .5rem 1rem;
+                
+
+                &:focus {
+                    border: 1px solid $secondry-color;
+                    outline: none;
+                }
+            }
+        }
+
+        .right {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            i {
+                font-size: 1.5rem;
+                &:hover {
+                    cursor:pointer;
+                }
+            }
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                background: $secondry-color;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
+            h3 {
+                font-size: 1.2rem;
+                font-weight: 600;
+            }
+
+            
+        }
+    }
+}
+
+main {
+    grid-area: m;
+    background-color: $grey-color;
+}
