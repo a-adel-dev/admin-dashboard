@@ -91,7 +91,8 @@ aside .nav .secondary-group li:hover {
 header {
   grid-area: h;
   padding: 2rem;
-  box-shadow: 5px 0px 5px #eee;
+  box-shadow: 5px 0px 5px #bbb;
+  z-index: 2;
 }
 header .upper {
   display: flex;
@@ -136,25 +137,219 @@ header .upper .right {
 }
 header .upper .right i {
   font-size: 1.5rem;
+  transition: 0.3s all ease-in-out;
 }
 header .upper .right i:hover {
   cursor: pointer;
+  transform: translateY(-5px);
 }
 header .upper .right img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background: #F5B873;
+  transition: 0.3s all ease-in-out;
 }
 header .upper .right img:hover {
   cursor: pointer;
+  transform: translateY(-5px);
 }
 header .upper .right h3 {
   font-size: 1.2rem;
   font-weight: 600;
+  transition: 0.3s all ease-in-out;
+}
+header .upper .right h3:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+header .lower {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .lower .user-box {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  gap: 20px;
+}
+header .lower .user-box img {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 3px #eee;
+}
+header .lower .user-box .greeting h5 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+header .lower .user-box .greeting h1 {
+  font-size: 1.5rem;
+}
+header .lower .user-box .greeting h1 a {
+  color: inherit;
+}
+header .lower .user-box .greeting h1 a:hover {
+  color: #153342;
+}
+header .lower .controls {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+}
+header .lower .controls button {
+  background-color: #153342;
+  color: #eee;
+  width: 150px;
+  height: 3rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 600;
+  transition: 0.3s all ease-in-out;
+}
+header .lower .controls button:hover {
+  transform: scale(1.1);
 }
 
 main {
   grid-area: m;
   background-color: #eee;
+  padding: 2rem;
+  width: 100%;
+}
+main .projects {
+  display: flex;
+  gap: 60px;
+}
+main .projects .content {
+  max-width: 60%;
+}
+main .projects .content p {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+main .projects .content .card-container {
+  display: grid;
+  gap: 30px;
+  width: 100%;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+main .projects .content .card-container .card {
+  height: 250px;
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 10px solid #F5B873;
+  position: relative;
+  box-shadow: 5px 5px 5px #bbb;
+  transition: 0.3s all ease-in;
+}
+main .projects .content .card-container .card:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+main .projects .content .card-container .card h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+main .projects .content .card-container .card p {
+  font-weight: 400;
+  font-size: 1rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.5rem;
+}
+main .projects .content .card-container .card .control-group {
+  position: absolute;
+  bottom: 15px;
+  right: 10px;
+}
+main .projects .content .card-container .card .control-group i {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-right: 1.3rem;
+  transition: 0.3s all ease-in;
+}
+main .projects .content .card-container .card .control-group i:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+main .projects .side-bar {
+  width: clamp 300px, 30%, 500px;
+}
+main .projects .side-bar .announcements {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 2rem 4rem;
+  margin-top: 2rem;
+  box-shadow: 5px 5px 5px #bbb;
+}
+main .projects .side-bar .announcements li {
+  border-bottom: 1px solid gray;
+  margin-bottom: 1rem;
+}
+main .projects .side-bar .announcements li h3 {
+  margin-bottom: 1rem;
+}
+main .projects .side-bar .announcements li p {
+  font-weight: 400;
+  font-size: 0.8rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 1rem;
+}
+main .projects .side-bar .announcements li:last-child {
+  border-bottom: none;
+  margin-bottom: 0rem;
+}
+main .projects .side-bar .lower {
+  margin-top: 2rem;
+}
+main .projects .side-bar .lower .trending {
+  margin-top: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 5px #bbb;
+  padding: 2rem 4rem;
+}
+main .projects .side-bar .lower .trending li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+main .projects .side-bar .lower .trending li img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #F5B873;
+  transition: 0.3s all ease-in-out;
+}
+main .projects .side-bar .lower .trending li img:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+main .projects .side-bar .lower .trending li a {
+  font-weight: 600;
+  color: #153342;
+  display: inline-block;
+  transition: 0.3s all ease-in-out;
+}
+main .projects .side-bar .lower .trending li a:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+main .projects .side-bar .lower .trending li:last-child {
+  margin-bottom: 0;
 }/*# sourceMappingURL=main.css.map */
